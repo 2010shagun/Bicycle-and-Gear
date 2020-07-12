@@ -7,11 +7,16 @@ public class Gear {
 		this.rim=rim;
 		this.tire=tire;
 	}
+	public double getCog() { return cog; }
+	public double getChainring() { return chainring; }
+	public double getRim() { return rim;}
+	public double getTire() { return tire;}
+	
 	public double ratio() {
-		return chainring/cog;
+		return getChainring()/getCog();
 	}
 	public double gear_inches() {
-		return (ratio()*(rim+(tire*2)));
+		return (ratio()*(getRim()+(getTire()*2)));
 	}
 	public static void main(String args[]) {
 		Gear gear1=new Gear(52,11,26,1.5);
